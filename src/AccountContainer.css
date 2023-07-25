@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  input {
+    width: 25% !;
+    margin-right: 0.25em!;
+    margin-left: 0.25em!;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  .AccountContainer{
+    text-align: center;
+  }
+  
+  
+  .AccountContainer {
+    background-color: #222;
+    padding: 20px;
+    color: white;
+  }
+  
+   
+  
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color:red;
+    color: #fff;
+  }
+  
+  tbody tr:hover {
+    background-color: #f2f2f2;
+  }
