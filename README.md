@@ -1,6 +1,6 @@
 ## BANK OF FLARITON APP 
  
- This is my app that displays alist of my recent bank transactions,among other features
+ This is my app that displays alist of my recent bank transactions,among other features.
  
 ## Instructions
  ## After unbundling the project:
