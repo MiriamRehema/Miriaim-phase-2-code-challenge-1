@@ -1,12 +1,15 @@
 ## BANK OF FLARITON APP 
+ 
  This is my app that displays alist of my recent bank transactions,among other features
  
 ## Instructions
  ## After unbundling the project:
 
    1. Run npm install in your terminal.
-    2. Run npm run server. This will run your backend on port 3000.
-   3.  In a new terminal, run npm start. This will run your React app on port 8000.
+   
+   2. Run npm run server. This will run your backend on port 3000.
+   
+   3.  In a new terminal, run npm start. This will run your React app on port 3000.
 
 Make sure to open http://localhost:3000/transactions in the browser to verify that your backend is working before you proceed!
 
