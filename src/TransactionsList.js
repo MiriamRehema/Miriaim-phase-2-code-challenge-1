@@ -22,9 +22,11 @@ function TransactionsList({transactions}) {
           </th>
         </tr>
         {/* render a list of <Transaction> components here */}
-      <TransactionsList transactions={transactions} />
-        
+      <Transaction/>
+      
+       
         {list}
+
       </tbody>
     </table>
   );

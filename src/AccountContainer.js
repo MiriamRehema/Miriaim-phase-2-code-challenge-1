@@ -1,5 +1,4 @@
 //
-
 import React, { useEffect, useState } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
@@ -17,12 +16,11 @@ function AccountContainer() {
     setQuery(e.target.value)
   }
   return (
-    <div>     
-      <h2>The Bank of Flariton</h2>
+    <div>
+      <h1>The Bank of Flariton</h1>
       <Search handleSearch={handleSearch} />
       <AddTransactionForm />
       <TransactionsList transactions={transaction} />
-      
     </div>
   );
 }
