@@ -1,117 +1,92 @@
-# Miriaim-phase-2-code-challenge-1
-# Survey
+## BANK OF FLARITON APP 
+ This is my app that displays alist of my recent bank transactions,among other features
+ 
+## Instructions
+ ## After unbundling the project:
 
-This website allows to fill and submit by adding a transaction 
-    
-## Table of Content
+   1. Run npm install in your terminal.
+    2. Run npm run server. This will run your backend on port 3000.
+   3.  In a new terminal, run npm start. This will run your React app on port 8000.
 
-Description
-Installation Requirement
-Technology Used
- Reference
-Licence
-Author
+Make sure to open http://localhost:3000/transactions in the browser to verify that your backend is working before you proceed!
 
-## Description
-This is  a website that shows my portfolio/resume.It contains all my background information,some sample projects that I have worked on and the experience gained.
+The app uses Semantic UI for styling. If you see any unfamiliar classNames on some components, don't sweat! That's coming from Semantic UI and you shouldn't need to touch it.
 
-## Installation
+If you are unfamiliar with HTML tables, take a look at the docs with an example here
+Endpoints
 
-### Requirements
+The base URL for your backend is: http://localhost:3000
+Core Deliverables
 
-* Either a computer,phone,tablet or an Ipad
+As a user, I should be able to:
 
-* An access to the Internet
+    See a table of the transactions.
+    Fill out and submit the form to add a new transaction. This should add the new transaction to the table as well as post the new transaction to the backend API for persistence.
+    Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
 
-## Installation Process
+## Endpoints for Core Deliverables
+GET /transactions
 
+Example Response:
 
-### Frontend
-[Link](https://watermellonfrnt.onrender.com/)
+[
+  {
+    "id": 1,
+    "date": "2019-12-01",
+    "description": "Paycheck from Bob's Burgers",
+    "category": "Income",
+    "amount": 1000
+  },
+  {
+    "id": 2,
+    "date": "2019-12-01",
+    "description": "South by Southwest Quinoa Bowl at Fresh & Co",
+    "category": "Food",
+    "amount": -10.55
+  }
+]
 
-    * Navigate to the project directory with the command `cd frontend`
+POST /transactions
 
-    * Navigate to the frontend directory with the command `cd Miriaim-phase-2-code-challenge-1
-`
+Required Headers:
 
-    * Install all the dependencies with the command `npm install`
+{
+  "Content-Type": "application/json"
+}
 
-    * Start the app with the command `npm run dev`
+Request Object:
 
-    * Navigate to the app on your browser with the url `http://localhost:****` where **** is the port number displayed on
-    your terminal eg 5174.
+{
+  "date": "string",
+  "description": "string",
+  "category": "string",
+  "amount": number
+}
 
-### Backend
+Example Response:
 
-[Link]()
+{
+  "id": 1,
+  "date": "2019-12-01",
+  "description": "Paycheck from Bob's Burgers",
+  "category": "Income",
+  "amount": 1000
+}
 
-#### Setup
+## Advanced Deliverables
 
+These deliverables are not required to pass the code challenge, but if you have the extra time, or even after the code challenge, they are a great way to stretch your skills.
 
-#### Commandline commands
+    Note: If you are going to attempt these advanced deliverables, please be sure to have a working commit with all the Core Deliverables first!
 
-#### Powershell commands
+As a user, I should be able to:
 
-    cd .\backend
+    Sort transactions alphabetically by category or description.
+    Delete a transaction which will remove it from the table and delete it from the backend.
 
-##### Bash Commands
+Endpoints for Advanced Deliverables
+DELETE /transactions/:id
 
-    cd ./backend
+Example Response:
 
-### Install Python requirements and dependencies
-
-    pip install -r requirements.txt
-
-### Environment variables
-
-     Create a .env file in the current directory with the following data format
-
-e.g
-
-    
-
-## Start Server
-
-### Commandline commands
-
-    To interact with the server locally, open the [link](http://127.0.0.1:3000) or paste http://127.0.0.1:3000
-    or http://localhost:3000
-    in the browser.
-
-[Go Back to the top](#portfolio)
-## Technology Used
-
-    * Frontend: ViteJS, Tailwind css.Redux Toolkit
-    * Backend: FAST API, Sqlalchemy.
-    * Database: PostgreSQL
-
-## Reference
-    * Materialize CSS
-    * React Router
-    * ViteJS
-    * Tailwind
-    * FastAPI
-
-[Go Back to the top](#portfolio)
-
-## Licence
-Copyright (c) 2023 MiriamRehema
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
+{}
