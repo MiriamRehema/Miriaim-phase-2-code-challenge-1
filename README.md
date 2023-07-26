@@ -51,13 +51,16 @@ Example Response:
 
 POST /transactions
 
+
 Required Headers:
+
 
 {
   "Content-Type": "application/json"
 }
 
 Request Object:
+
 
 {
   "date": "string",
@@ -67,6 +70,7 @@ Request Object:
 }
 
 Example Response:
+
 
 {
   "id": 1,
